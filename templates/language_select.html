@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择编程语言</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/language_select.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="language-grid">
+            <a href="/editor/cpp" class="language-card">
+                <div class="language-icon">C++</div>
+                <h3>C++</h3>
+                <p class="card-description">高性能编程语言</p>
+            </a>
+            <div class="language-card disabled">
+                <div class="language-icon">Py</div>
+                <h3>Python</h3>
+                <p class="card-description">即将开放</p>
+            </div>
+            <div class="language-card disabled">
+                <div class="language-icon">Js</div>
+                <h3>JavaScript</h3>
+                <p class="card-description">即将开放</p>
+            </div>
+            <div class="language-card disabled">
+                <div class="language-icon">Java</div>
+                <h3>Java</h3>
+                <p class="card-description">即将开放</p>
+            </div>
+        </div>
+        <button class="back-button" onclick="window.location.href='/'">返回主页</button>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>代码编辑器</h2>
+            <div class="feature-description">
+                <p>在线编程</p>
+                <p class="sub-text">实时编写和运行代码</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="feature-description coming-soon">
+                <p>开发中...</p>
+                <p class="sub-text">敬请期待</p>
+            </div>
+        </div>
+        <div class="button-group">
+            <button class="feature-button" onclick="window.location.href='/editor'">开始编程</button>
+            <button class="feature-button disabled">即将开放</button>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ 编辑器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cpp_editor.css') }}">
+</head>
+<body>
+    <div class="editor-container">
+        <!-- 左侧草稿区 -->
+        <div class="draft-panel">
+            <div class="text-draft">
+                <h3>文字草稿</h3>
+                <textarea placeholder="在这里写下你的想法..."></textarea>
+            </div>
+            <div class="drawing-draft">
+                <h3>绘图区域</h3>
+                <canvas id="drawingCanvas"></canvas>
+                <div class="drawing-tools">
+                    <button id="clearCanvas">清除</button>
+                    <input type="color" id="colorPicker">
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧编辑器区 -->
+        <div class="main-editor">
+            <!-- 代码编辑区 -->
+            <div class="code-editor">
+                <div class="line-numbers"></div>
+                <textarea id="codeArea" placeholder="在这里编写C++代码..."></textarea>
+            </div>
+            
+            <!-- 输入输出区 -->
+            <div class="io-panel">
+                <div class="input-area">
+                    <h3>输入</h3>
+                    <textarea placeholder="程序输入..."></textarea>
+                </div>
+                <div class="output-area">
+                    <h3>输出</h3>
+                    <div class="output-content"></div>
+                </div>
+            </div>
+
+            <!-- 控制按钮 -->
+            <button class="run-button">运行代码</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/cpp_editor.js') }}"></script>
+</body>
+</html> 
